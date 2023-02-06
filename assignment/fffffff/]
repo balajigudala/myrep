@@ -1,0 +1,58 @@
+/*#include<stdio.h>
+#include<string.h>
+main()
+{
+	/*
+	char*ptr;
+	char dst[10];
+	char src[10]="sheshu";
+	ptr=strcpy(dst,src);
+	printf("%p-%s\n",ptr,ptr);
+
+	char*ptr="hari%skrishna%s";
+	printf(ptr,ptr,ptr)/
+	char dst[10];
+	strcpy(dst,"hari");
+	printf("%s\n",dst);
+	
+	int len;
+	
+	len=strlen("bharu");
+	printf("%d\n",len);
+}*/
+
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+	int *ptr,nptr;
+	int i;
+	ptr=(int *)malloc(5*sizeof(int));
+	if(ptr==NULL)
+	{
+		printf("failed to allocate memory");
+		exit(1);
+	}
+	for(i=0;i<5;i++)
+	{
+		printf("enter the elements");
+		scanf("%d",&ptr[i]);
+	}
+nptr=(int *)realloc(ptr,10*sizeof(int));
+if(nptr==NULL)
+{
+	printf("failed to allocate memory");
+	exit(2);
+}
+for(i=5;i<10;i++)
+{
+	printf("enter the element:\n");
+	scanf("%d",&nptr[i]);
+}
+}
+
+
+
+
+
+

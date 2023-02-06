@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<sys/mman.h>
+#include<unistd.h>
+#include<stdlib.h>
+
+void main()
+{
+	struct stat buff;
+	int fd;
+	char *ptr;
+	fd=open("bitwise.c",O_RDWR);
+	if(fd<0)
+	{
+		printf("failed to open file\n");
+		exit(1);
+	}
+}
